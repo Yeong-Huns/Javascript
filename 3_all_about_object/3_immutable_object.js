@@ -70,6 +70,7 @@ console.log(yuJin2)
 
 delete yuJin2.name;
 console.log(yuJin2) // 삭제도 안됨 . 아예 Sealed 했기 때문
+console.log(Object.getOwnPropertyDescriptor(yuJin2, 'name'))
 Object.defineProperty(yuJin2, 'name', {
 	writable: false,
 })
